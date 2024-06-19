@@ -4,6 +4,7 @@
 
 ### App Description 📱
 
+- URL - <u>https://infominer.vercel.app</u>
 - Version - **1.0.0**
 - Basic Features - **Search Engine (Webpages)**
 
