@@ -1,18 +1,18 @@
 "use client";
 
 
-import { SEARCH_QUERY_REDUCER_ACTION_TYPE, previousSearchQueryFromLocalStorage, useSearchQueryContext } from "@/contexts/searchQuery.context";
+import { SEARCH_QUERY_REDUCER_ACTION_TYPE, useSearchQueryContext } from "@/contexts/searchQuery.context";
 import { searchWebQuery } from "@/states/server/searchWeb.query";
 import { useQuery } from "@tanstack/react-query";
 import { useRouter, useSearchParams } from "next/navigation";
 import SkeletonLoader from "./SkeletonLoader";
 import { SearchResult } from "@/types/webSearch.type";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import WebSearchResult from "./WebSearchResult";
 import LoadMore from "./LoadMore";
 
 
-export default function WebSearchResults() {
+function WebSearchResultsComponent() {
   const [ results, setResults ] = useState<SearchResult[]>([]);
 
   const { dispatch } = useSearchQueryContext();
@@ -63,6 +63,15 @@ export default function WebSearchResults() {
         <LoadMore searchParams={searchParams} />
       )}
     </section>
+  );
+}
+
+
+export default function WebSearchResults() {
+  return (
+    <Suspense>
+      <WebSearchResultsComponent />
+    </Suspense>
   );
 }
 

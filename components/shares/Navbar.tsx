@@ -5,10 +5,11 @@ import { SEARCH_QUERY_REDUCER_ACTION_TYPE, previousSearchQueryFromLocalStorage, 
 import { queryClient } from "@/states/server/ServerQueryProvider";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import { useForm } from "react-hook-form";
 
 
-export default function Navbar() {
+function NavbarComponent() {
   const { searchQueryParam, dispatch } = useSearchQueryContext();
 
   const router = useRouter();
@@ -62,6 +63,15 @@ export default function Navbar() {
         </button>
       </form>
     </nav>
+  );
+}
+
+
+export default function Navbar() {
+  return (
+    <Suspense>
+      <NavbarComponent />
+    </Suspense>
   );
 }
 
