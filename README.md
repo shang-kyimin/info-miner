@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# InfoMiner
+> Mining the information that interests you. With a simple search by unlocking the power of search results for free!
 
-## Getting Started
 
-First, run the development server:
+### App Description 📱
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Version - **1.0.0**
+- Basic Features - **Search Engine (Webpages)**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Features 🚀
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- With the brilliant <u>SearchAPI</u> provided by Brave Software, Inc - InfoMiner can show search results based on what user types in in the search bar from both home page "/" and search page "/search?q=".
 
-## Learn More
+- Instead of fetching whole search results, InfoMiner show results that are most relevant to what user typed in and then, with the power of <u>Infinite Scrolling</u>, not only users can view the results more smoothly but also, the browser doesn't have to fetch tons of information at once.
 
-To learn more about Next.js, take a look at the following resources:
+- Basic features of the app: inputs for search (including search bar and url bar), search engine's results for webpages and infinite scrolling are all <u>Well-Tested</u>.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Tech Stacks 📚
 
-## Deploy on Vercel
+#### Main Technologies
+01. **Next.js** (Front-end Framework)
+02. **React.js** (Front-end Library)
+03. **TypeScript** (Front-end Language)
+04. **TailwindCSS** (Styling Framework)
+05. **Local Storage** (Database)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### Additional Tools/Libraries
+01. **ShadCN** (Components Library)
+02. **TanStack Query** (Fetching Tool)
+03. **Zod** (Type-Validation Tool)
+04. **ReactHookForm** (Form Library)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+#### API Providers
+01. **Brave Search API** (Search-Engine)
+
+
